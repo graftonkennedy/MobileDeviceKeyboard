@@ -1,0 +1,17 @@
+There are three things I need to tell you.
+The first thing is that you need to test if you need to train
+on multiple lines or not.
+The second thing is that there may be many occurances of things
+that occur frequently in text and few occurances of things that
+occur less frequently.
+The third thing that I need to tell you is that this thing
+does not think thoroughly. A single letter word might be troublesome
+too.
+---
+the
+occ
+occur
+thi
+nee
+tH
+a

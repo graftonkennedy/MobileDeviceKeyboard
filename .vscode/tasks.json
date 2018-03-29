@@ -1,0 +1,52 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "javac",
+            "type": "shell",
+            "command": "javac",
+            "args": [
+                "-g ${relativeFile}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": {
+                "owner": "external",
+                "fileLocation": [
+                    "absolute"
+                ],
+                "pattern": [
+                    {
+                        "regexp": "^(.+\\.java):(\\d):(?:\\s+(error)):(?:\\s+(.*))$",
+                        "file": 1,
+                        "location": 2,
+                        "severity": 3,
+                        "message": 4
+                    }
+                ]
+            }
+        },
+        {
+            "label": "javadoc",
+            "type": "shell",
+            "command": "javadoc",
+            "args": [
+                "-d html -private *.java"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always"
+            }
+        }
+    ]
+}
